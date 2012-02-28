@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gourmand-System</title>
+<link type="text/css" rel="stylesheet"
+	href="../css/jquery.mobile-1.0.1.min.css" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.mobile-1.0.1.min.js"></script>
+<script type="text/javascript" src="../js/phonegap-1.4.1.js"></script>
+<script type="text/javascript">
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+		$('#btnLogin').bind('click', function() {
+			
+		});
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<div data-role="page" id="mainPage">
+		<div data-role="header">
+			<h1>Gourmand-System</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-body ui-body-c">
+				<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+					<!--<label for="txtAccount" class="ui-input-text">Login Name:</label>-->
+					<input type="text" name="txtAccount" id="txtAccount"
+						placeholder="用户名"
+						class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+				</div>
+				<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+					<!--<label for="txtPass" class="ui-input-text">Password:</label>-->
+					<input type="password" name="txtPass" id="txtPass" placeholder="密码"
+						class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+				</div>
+				<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+					<Button id="btnLogin" data-role="button">登录</Button>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer">
+			<h4>Phone client to takeout.</h4>
+		</div>
+	</div>
+	<div id="loginInfoPage" data-role="dialog" data-transition="flip">
+		<div data-role="header">
+			<h1>正在登录中...</h1>
+		</div>
+		<div data-role="content">
+			<div id="loginInfo">
+				<div id="loginTime"></div>
+				<div id="loginInfoMsg"></div>
+			</div>
+			<div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+				<a href="#mainPage" data-role="button" data-rel="back">取消登录</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
